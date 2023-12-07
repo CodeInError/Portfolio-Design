@@ -1,0 +1,46 @@
+<main id="main">
+
+    <!-- ======= Portfolio Section ======= -->
+    <!-- End Portfolio Section -->
+    <!-- portfolio.component.html -->
+
+    <section id="portfolio" class="portfolio" data-aos="fade-up">
+    <div class="container">
+  
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+  
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li (click)="filterItems('*')" [class.filter-active]="activeFilter === '*'">All</li>
+            <li (click)="filterItems('.filter-app')" [class.filter-active]="activeFilter === '.filter-app'">App</li>
+            <li (click)="filterItems('.filter-card')" [class.filter-active]="activeFilter === '.filter-card'">Card</li>
+            <li (click)="filterItems('.filter-web')" [class.filter-active]="activeFilter === '.filter-web'">Web</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- Use *ngFor directive to loop through portfolio items -->
+        <div *ngFor="let item of portfolioItems" class="col-lg-4 col-md-6 portfolio-item" [ngClass]="item.category">
+          <div class="portfolio-wrap">
+            <img [src]="item.imageSrc" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.category }}</p>
+              {{item.id}}
+              <div class="portfolio-links">
+                <a [href]="item.imageSrc" data-gallery="portfolioGallery" class="portfolio-lightbox" [title]="item.title"><i class="bx bx-plus"></i></a>
+                <a [routerLink]="['/portfolio-details', item.id]" class="portfolio-details-lightbox" data-glightbox="type: external" [title]="'Portfolio Details ' + item.id"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  
+  </main>
