@@ -11,5 +11,7 @@ export class ResumeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  downloadCV() {
+    window.open('../../assets/Ravi_CV.pdf', '_blank');
+  }
 }
