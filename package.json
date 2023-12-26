@@ -26,6 +26,8 @@
     "boxicons": "^2.1.4",
     "glightbox": "^3.2.0",
     "isotope-layout": "^3.0.6",
+    "primeicons": "^6.0.1",
+    "primeng": "^14.2.3",
     "rxjs": "~7.5.0",
     "swiper": "^11.0.5",
     "tslib": "^2.3.0",

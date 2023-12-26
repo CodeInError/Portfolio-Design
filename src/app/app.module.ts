@@ -18,6 +18,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { GoogleMap } from '@angular/google-maps';
 import { BackComponent } from './components/back/back.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { HttpClientModule } from '@angular/common/http';
+import {DialogModule} from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,9 +43,13 @@ import { BackComponent } from './components/back/back.component';
     ReactiveFormsModule,
     BrowserModule,
     GoogleMapsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastModule,
+    HttpClientModule,
+    DialogModule,
+    ButtonModule
   ],
-  providers: [GoogleMap],
+  providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

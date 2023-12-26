@@ -6,30 +6,30 @@
 
       <div class="section-title">
         <h2>About</h2>
-        <p>Hi, I'm Ravi Vegad, an Angular Developer with 2+ years of experience. Proficient in Angular, TypeScript, and
+        <p>Hi, I'm Anonymous, an Angular Developer with 2+ years of experience. Proficient in Angular, TypeScript, and
           modern web technologies. I specialize in crafting responsive and performant applications. Passionate about
           clean code, collaboration, and staying ahead in tech trends. Let's connect and build something great together!
         </p>
       </div>
 
       <div class="row">
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
           <img src="../../../assets/img/Final_About-removebg.png" class="img-fluid" alt="">
-        </div>
+        </div> -->
         <div class="col-lg-8 pt-4 pt-lg-0 content">
           <h3> Web Developer</h3>
           <div class="row">
             <div class="col-lg-6">
               <ul>
                 <li><i class="bi bi-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
-                <li><i class="bi bi-rounded-right"></i> <strong>Phone:</strong> +91 7990021211</li>
+                <li><i class="bi bi-rounded-right"></i> <strong>Phone:</strong> +91 987456123</li>
                 <li><i class="bi bi-rounded-right"></i> <strong>City:</strong> Surat</li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> Master</li>
-                <li><i class="bi bi-rounded-right"></i> <strong>PhEmailone:</strong> vegadravi84@gmail.com</li>
+                <li><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> B.Tech</li>
+                <li><i class="bi bi-rounded-right"></i> <strong>PhEmailone:</strong> Anonymous@gmail.com</li>
                 <li><i class="bi bi-rounded-right"></i> <strong>Freelance:</strong> Available</li>
               </ul>
             </div>
@@ -69,98 +69,31 @@
   <!-- ======= Skills Section ======= -->
   <section id="skills" class="skills">
     <div class="container" data-aos="fade-up">
-
       <div class="section-title">
         <h2>Skills</h2>
       </div>
 
       <div class="row skills-content">
-
-        <div class="col-lg-6">
+        <div class="col-lg-6" *ngFor="let skill of skills.slice(0, skills.length / 2)">
           <div class="progress">
-            <span class="skill">Angular <i class="val">87%</i></span>
+            <span class="skill">{{ skill.name }} <i class="val">{{ skill.percentage }}%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Typescript <i class="val">70%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Firebase <i class="val">60%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">HTML+CSS <i class="val">60%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Database(MongoDB,mysql) <i class="val">70%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Bootstrap <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" [style.width]="skill.percentage + '%'" [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-6">
-
+        <div class="col-lg-6" *ngFor="let skill of skills.slice(skills.length / 2)">
           <div class="progress">
-            <span class="skill">JavaScript <i class="val">75%</i></span>
+            <span class="skill">{{ skill.name }} <i class="val">{{ skill.percentage }}%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" [style.width]="skill.percentage + '%'" [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-
-          <div class="progress">
-            <span class="skill">Node + Express <i class="val">50%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Rxjs + lodash<i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Agile methodlogy <i class="val">50%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 50%;"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">git <i class="val">68%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 68%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Primeng <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
         </div>
-
       </div>
-
     </div>
-  </section><!-- End Skills Section -->
+  </section>
+
+  <!-- End Skills Section -->
 </main><!-- End #main -->
