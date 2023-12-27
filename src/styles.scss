@@ -473,6 +473,30 @@ body {
     background: #3dc8b7;
   }
 
+  #login .btn-login{
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: #fff;
+    background: #5063F0;
+  }
+
+  #login .btn-login:hover {
+    background: #3dc8b7;
+  }
+
+  #login .login-header{
+    position: fixed;
+    right: 18px;
+    top: 15px;
+  }
+
   @media (min-width: 1024px) {
     #hero {
       background-attachment: fixed;
