@@ -41,11 +41,11 @@ body {
     margin-top: 50px;
   }
 
-  @media (max-width: 992px) {
-    #main {
-      margin-top: 30px;
-    }
-  }
+  // @media (max-width: 992px) {
+  //   #main {
+  //     margin-top: 30px;
+  //   }
+  // }
 
   /*--------------------------------------------------------------
   # Preloader
@@ -145,11 +145,11 @@ body {
     max-height: 40px;
   }
 
-  @media (max-width: 992px) {
-    #header .logo {
-      font-size: 28px;
-    }
-  }
+  // @media (max-width: 992px) {
+  //   #header .logo {
+  //     font-size: 28px;
+  //   }
+  // }
 
   /*--------------------------------------------------------------
   # Header Social Links
@@ -299,15 +299,15 @@ body {
     visibility: visible;
   }
 
-  @media (max-width: 1366px) {
-    .navbar .dropdown .dropdown ul {
-      left: -90%;
-    }
+  // @media (max-width: 1366px) {
+  //   .navbar .dropdown .dropdown ul {
+  //     left: -90%;
+  //   }
 
-    .navbar .dropdown .dropdown:hover>ul {
-      left: -100%;
-    }
-  }
+  //   .navbar .dropdown .dropdown:hover>ul {
+  //     left: -100%;
+  //   }
+  // }
 
   /**
   * Mobile Navigation
@@ -325,15 +325,15 @@ body {
     color: #fff;
   }
 
-  @media (max-width: 991px) {
-    .mobile-nav-toggle {
-      display: block;
-    }
+  // @media (max-width: 991px) {
+  //   .mobile-nav-toggle {
+  //     display: block;
+  //   }
 
-    .navbar ul {
-      display: none;
-    }
-  }
+  //   .navbar ul {
+  //     display: none;
+  //   }
+  // }
 
   .navbar-mobile {
     position: fixed;
@@ -350,7 +350,7 @@ body {
   .navbar-mobile .mobile-nav-toggle {
     position: absolute;
     top: 15px;
-    right: 15px;
+    left: 15px;
   }
 
   .navbar-mobile ul {
@@ -434,11 +434,11 @@ body {
     position: relative;
   }
 
-  @media (max-width: 992px) {
-    #hero .container {
-      padding-top: 58px;
-    }
-  }
+  // @media (max-width: 992px) {
+  //   #hero .container {
+  //     padding-top: 58px;
+  //   }
+  // }
 
   #hero h1 {
     margin: 0;
@@ -492,38 +492,38 @@ body {
   }
 
   #login .login-header{
-    position: fixed;
-    right: 18px;
-    top: 15px;
+    // position: fixed;
+    // right: 18px;
+    // top: 15px;
   }
 
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
-    }
-  }
+  // @media (min-width: 1024px) {
+  //   #hero {
+  //     background-attachment: fixed;
+  //   }
+  // }
 
-  @media (max-width: 992px) {
-    #hero:before {
-      content: "";
-      background: rgba(255, 255, 255, 0.8);
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
+  // @media (max-width: 992px) {
+  //   #hero:before {
+  //     content: "";
+  //     background: rgba(255, 255, 255, 0.8);
+  //     position: absolute;
+  //     bottom: 0;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //   }
 
-    #hero h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
+  //   #hero h1 {
+  //     font-size: 28px;
+  //     line-height: 36px;
+  //   }
 
-    #hero h2 {
-      font-size: 18px;
-      line-height: 24px;
-    }
-  }
+  //   #hero h2 {
+  //     font-size: 18px;
+  //     line-height: 24px;
+  //   }
+  // }
 
   /*--------------------------------------------------------------
   # Sections General
@@ -604,19 +604,19 @@ body {
     border: 2px solid #5063F0;
   }
 
-  @media (max-width: 1024px) {
-    .cta {
-      background-attachment: scroll;
-    }
-  }
+  // @media (max-width: 1024px) {
+  //   .cta {
+  //     background-attachment: scroll;
+  //   }
+  // }
 
-  @media (min-width: 769px) {
-    .cta .cta-btn-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-  }
+  // @media (min-width: 769px) {
+  //   .cta .cta-btn-container {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: flex-end;
+  //   }
+  // }
 
   /*--------------------------------------------------------------
   # About
@@ -758,11 +758,28 @@ body {
     margin: 0 auto 15px auto;
   }
 
-  @media (min-width: 992px) {
-    .testimonials .testimonial-item p {
-      width: 80%;
-    }
-  }
+  // @media (min-width: 992px) {
+  //   .testimonials .testimonial-item p {
+  //     width: 80%;
+  //   }
+  // }
+
+  // @media (min-width: 412px) {
+  //  #login .btn-login {
+  //   font-size: 9px;
+  //   padding: 12px 26px;
+  //  }
+  // }
+
+   #hero h2{
+    // margin: 9px 27px 6px 37px;
+    margin-left: 58px;
+   }
+
+   #hero .btn-about {
+    margin-top: 20px;
+   }
+
 
   .testimonials .swiper-pagination {
     margin-top: 20px;

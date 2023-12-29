@@ -2,11 +2,9 @@
   <div class="container-fluid d-flex justify-content-between align-items-center">
 
     <h1 class="logo me-auto me-lg-0"><a routerLink="/" routerLinkActive="">Anonymous</a></h1>
-    <!-- Uncomment below if you prefer to use an image logo -->
-    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
+    <nav id="navbar" class="navbar navbar-expand-lg order-last order-lg-0">
+      <ul class="collapse navbar-collapse" id="navbarNav">
         <li><a class="active" routerLink="/" routerLinkActive="active">Home</a></li>
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
         <li><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
@@ -14,38 +12,55 @@
          <li><a routerLink="/port-folio" routerLinkActive="active">Portfolio</a></li>
         <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </nav><!-- .navbar -->
 
 
-    <div class="header-social-links">
+    <!-- <div class="header-social-links">
       <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       <a href="#" class="github"><i class="bi bi-github"></i></a>
-    </div>
+    </div> -->
     <div id="login">
       <a (click)="goToLogin()" class="btn-login login-header">Login</a>
     </div>
 
-    <p-dialog header="Long Content" [(visible)]="displayLoginDialog" [style]="{width: '50vw'}" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-          qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-          quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-          vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-          similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
-          cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-          eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-  </p-dialog>
 
   </div>
 
+
+
+
+  <p-dialog header="Login-Page"  [(visible)]="displayLoginDialog" [style]="{ width: '45vw' }" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <form class="card-body cardbody-color">
+              <div class="text-center">
+                <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                  width="200px" alt="profile">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-color px-5 mb-3 w-100">Login</button>
+              </div>
+              <div id="emailHelp" class="form-text text-center mb-3 text-dark">
+                Not Registered? <a href="#" class="text-dark fw-bold">Create an Account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
 </header>

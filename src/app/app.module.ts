@@ -47,7 +47,8 @@ import { ButtonModule } from 'primeng/button';
     ToastModule,
     HttpClientModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]
