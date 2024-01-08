@@ -1,10 +1,26 @@
 <section id="hero" class="d-flex align-items-center">
+  <div class="video-container">
+    <video autoplay muted loop playsinline id="video-background">
+      <source src="assets/img/landingV1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container d-flex flex-column align-items-center overlay-content" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Anonymous</h1>
+      <h2 style="color: white;">"Craft Your Professional Identity: <span style="color: red;">Build</span>,<span style="color: #EFB702;">Showcase</span>,<span style="color: green;">Succeed</span>."</h2>
+      <a (click)="goToLogin()" class="btn-about">Login</a>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="hero" class="d-flex align-items-center">
   <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
     <h1>Anonymous</h1>
     <h2>"Craft Your Professional Identity: <span style="color: red;">Build</span>,<span style="color: #EFB702;">Showcase</span>,<span style="color: green;">Succeed</span>."</h2>
     <a (click)="goToLogin()" class="btn-about">Login</a>
   </div>
-</section>
+</section> -->
+
+
 
 <p-dialog header="Login-Page"  [(visible)]="displayLoginDialog" [style]="{ width: '45vw' }" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
   <div class="container">
