@@ -1590,7 +1590,7 @@ body {
    margin: 0;
    padding: 0;
    list-style: none;
-   font-size: 2.2rem;
+   font-size: 16px;
    line-height: 1.75;
    text-align: center;
    -webkit-transform: translateY(-55%);
@@ -1630,7 +1630,7 @@ body {
  .home-scrolldown {
    position: absolute;
    bottom: 0;
-   right: 0;
+   right: -9px;
    -webkit-transform: rotate(90deg);
    -ms-transform: rotate(90deg);
    transform: rotate(90deg);
@@ -1816,7 +1816,7 @@ body {
    }
    .home-image-right img {
      vertical-align: top;
-     width: 100%;
+    //  width: 100%;
    }
  }
 
