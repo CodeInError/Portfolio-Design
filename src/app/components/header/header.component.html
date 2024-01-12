@@ -1,63 +1,62 @@
-<header id="header" class="fixed-top">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
-
-    <h1 class="logo me-auto me-lg-0"><a routerLink="/" routerLinkActive="">Anonymous</a></h1>
-
-    <nav id="navbar" class="navbar navbar-expand-lg order-last order-lg-0">
-      <ul class="collapse navbar-collapse" id="navbarNav">
-        <li><a class="active" routerLink="/" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
-        <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
-         <li><a routerLink="/port-folio" routerLinkActive="active">Portfolio</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+<section class="header-top">
+    <div class="feature-box">
+      <i class="bi bi-exclamation"></i>
+      <span class="nf"> New Feature:</span>  You can now create a your customize PortFolio
+    </div>
+</section>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/"><h5 class="nav-name">ANONYMOUS</h5></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li><a class="active nav-link" routerLink="/" routerLinkActive="active">Home</a></li>
+          <li><a class=" nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+          <li><a  class="nav-link" routerLink="/resume" routerLinkActive="active">Resume</a></li>
+          <li><a class="nav-link" routerLink="/services" routerLinkActive="active">Service</a></li>
+          <li><a class="nav-link" routerLink="/port-folio" routerLinkActive="active">PortFolio</a></li>
+          <li><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a></li>
       </ul>
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-    </nav><!-- .navbar -->
 
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn-search-icon rounded-circle"><i class="bi bi-search-heart"></i></button>
+      </form> -->
 
-    <!-- <div class="header-social-links">
-      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="#" class="github"><i class="bi bi-github"></i></a>
-    </div> -->
+    </div>
     <div id="login">
       <a (click)="goToLogin()" class="btn-login login-header">Login</a>
     </div>
-
-
   </div>
+</nav>
 
-  <p-dialog header="Login-Page"  [(visible)]="displayLoginDialog" [style]="{ width: '45vw' }" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div class="card">
-            <form class="card-body cardbody-color">
-              <div class="text-center">
-                <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
-                  width="200px" alt="profile">
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name">
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control" id="password" placeholder="Password">
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-color px-5 mb-3 w-100">Login</button>
-              </div>
-              <div id="emailHelp" class="form-text text-center mb-3 text-dark">
-                Not Registered? <a href="#" class="text-dark fw-bold">Create an Account</a>
-              </div>
-            </form>
-          </div>
+<p-dialog header="Login-Page"  [(visible)]="displayLoginDialog" [style]="{ width: '45vw' }" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <form class="card-body cardbody-color">
+            <div class="text-center">
+              <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-color px-5 mb-3 w-100">Login</button>
+            </div>
+            <div id="emailHelp" class="form-text text-center mb-3 text-dark">
+              Not Registered? <a href="#" class="text-dark fw-bold">Create an Account</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </p-dialog>
-</header>
+  </div>
+</p-dialog>

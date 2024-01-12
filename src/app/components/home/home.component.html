@@ -1,4 +1,4 @@
-<section id="hero" class="d-flex align-items-center">
+<!-- <section id="hero" class="d-flex align-items-center">
   <div class="video-container">
     <video autoplay muted loop playsinline id="video-background">
       <source src="assets/img/landingV1.mp4" type="video/mp4">
@@ -10,7 +10,7 @@
       <a (click)="goToLogin()" class="btn-about">Login</a>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- <section id="hero" class="d-flex align-items-center">
   <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
@@ -19,6 +19,113 @@
     <a (click)="goToLogin()" class="btn-about">Login</a>
   </div>
 </section> -->
+
+  <!-- home
+   ================================================== -->
+   <section id="home" data-parallax="scroll" data-image-src="assets\img\hero-bg.jpg" data-natural-width=3000 data-natural-height=2000>
+
+    <div class="overlay"></div>
+    <div class="home-content">
+
+        <div class="contents">
+            <div class="home-content-left">
+
+                <h3 data-aos="fade-up">Welcome to ANONYMOUS</h3>
+
+                <h1 data-aos="fade-up">
+                 You can create your own customize Portfolio...
+                </h1>
+
+                <div class="buttons" data-aos="fade-up">
+                    <a href="#download" class="smoothscroll button stroke btn-home-button" (click)="goToLogin()">
+                      <i class="bi bi-box-arrow-in-right mr-4"></i>
+                        Sign-Up/Login
+                    </a>
+                    <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=39b54a" data-lity class="button stroke btn-home-button">
+                      <i class="bi bi-play-circle mr-4"></i>
+                        Watch Video
+                    </a>
+                </div>
+            </div>
+            <div class="home-image-right">
+                <img src="../assets/img/iphone-app-470.png">
+            </div>
+
+        </div>
+
+    </div> <!-- end home-content -->
+
+    <ul class="home-social-list">
+        <li>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="bi bi-youtube-play"></i></a>
+        </li>
+        <li>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#" class="github"><i class="bi bi-github"></i></a>
+        </li>
+    </ul>
+
+    <div class="home-scrolldown">
+        <a href="#about" class="scroll-icon smoothscroll">
+            <span>Scroll Down</span>
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</section>
+
+
+<!-- About -->
+<!-- Sameer 2nd -->
+ <!-- about
+    ================================================== -->
+    <section id="about">
+
+      <div class="about-how">
+          <h1 class="intro-header" data-aos="fade-up">How The App Works?</h1>
+
+          <div class="about-how-content" data-aos="fade-up">
+              <div class="about-how-steps block-1-2 block-tab-full group">
+
+                  <div class="bgrid step" data-item="1">
+                      <h3>Sign-Up</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                      </p>
+                  </div>
+
+                  <div class="bgrid step" data-item="2">
+                      <h3>Upload</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                      </p>
+                  </div>
+
+                  <div class="bgrid step" data-item="3">
+                      <h3>Create</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                      </p>
+                  </div>
+
+                  <div class="bgrid step" data-item="4">
+                      <h3>Publish</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                      </p>
+                  </div>
+
+              </div>
+         </div> <!-- end about-how-content -->
+
+      </div> <!-- end about-how -->
 
 <p-dialog header="Login-Page"  [(visible)]="displayLoginDialog" [style]="{ width: '45vw' }" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
   <div class="container">
