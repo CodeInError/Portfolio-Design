@@ -1,11 +1,11 @@
-<section class="header-top">
+<!-- <section class="header-top">
     <div class="feature-box">
       <i class="bi bi-exclamation"></i>
       <span class="nf"> New Feature:</span>  You can now create a your customize PortFolio
     </div>
-</section>
+</section> -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
+  <div class="container nav-container">
     <a class="navbar-brand" href="/"><h5 class="nav-name">ANONYMOUS</h5></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,12 +24,12 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn-search-icon rounded-circle"><i class="bi bi-search-heart"></i></button>
       </form> -->
+      <div id="login">
+        <a (click)="goToLogin()" class="btn-login login-header">Sign Up</a>
+      </div>
+    </div>
 
     </div>
-    <div id="login">
-      <a (click)="goToLogin()" class="btn-login login-header">Login</a>
-    </div>
-  </div>
 </nav>
 
 <p-dialog header="Login-Page"  [(visible)]="displayLoginDialog" [style]="{ width: '45vw' }" [closable]="true" [draggable]="false" [blockScroll]="true" [closeOnEscape]="true" [modal]="true" [resizable]="true" [maximizable]="false">
