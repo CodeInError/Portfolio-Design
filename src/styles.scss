@@ -1862,7 +1862,7 @@ body {
    .home-content-left {
      width: 94%;
      position: static;
-     padding: 15rem 6rem 366px;
+     padding: 2rem 6rem 366px;
      margin: 0 auto;
    }
    .home-content-left h1 {
@@ -1894,7 +1894,7 @@ body {
 
  @media only screen and (max-width: 600px) {
    .home-content-left {
-     padding: 12rem 6rem 366px;
+     padding: 2rem 6rem 366px;;
    }
    .home-content-left h1 {
      font-size: 3.3rem;
@@ -1931,8 +1931,12 @@ body {
      display: none;
    }
    .home-content-left {
-     padding: 12rem 2.5rem 366px;
+     padding: 2rem 2.5rem 366px;
      width: 100%;
+   }
+
+   .home-image-right {
+    left: 39%;
    }
    .home-content-left h1 {
      font-size: 3rem;
@@ -1953,7 +1957,7 @@ body {
 
  @media only screen and (max-width: 400px) {
    .home-content-left {
-     padding: 12rem 0 300px;
+     padding: 2rem 0 300px;
    }
    .home-content-left .button.stroke {
      margin: 0 0 1.2rem 0;
@@ -1978,7 +1982,7 @@ body {
    .home-image-right {
     margin-bottom: -78px;
     width: 276px;
-    left: 40%;
+    left: 39%;
    }
  }
 
