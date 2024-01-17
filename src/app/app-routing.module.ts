@@ -7,6 +7,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { HomeComponent } from './components/home/home.component';
 import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
 {
   path:'resume',
   component:ResumeComponent
+},
+{
+  path:'login',
+  component:LoginPageComponent
 }
 ];
 

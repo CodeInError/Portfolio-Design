@@ -23,6 +23,7 @@ import { MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { ButtonModule } from 'primeng/button';
     HomeComponent,
     FooterComponent,
     PortfolioDetailsComponent,
-    BackComponent
+    BackComponent,
+    LoginPageComponent
   ],
   imports: [
     AppRoutingModule,
