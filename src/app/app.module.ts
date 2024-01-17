@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     HttpClientModule,
     DialogModule,
     ButtonModule,
-    FormsModule
+    FormsModule,
+    DropdownModule
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]

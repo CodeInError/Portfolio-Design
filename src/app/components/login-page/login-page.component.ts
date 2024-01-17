@@ -7,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  forgetPageVisible: false | any
-  createAccountVisible: false | any
+  forgetPageVisible: false | any;
+  createAccountVisible: false | any;
+  forgetEMailAddress : false | any;
+  cities: any;
+  selectedCity1: string | any;
 
-  constructor() { }
+  constructor() {
+
+    this.cities = [
+      {name: 'New York', code: 'NY'},
+      {name: 'Rome', code: 'RM'},
+      {name: 'London', code: 'LDN'},
+      {name: 'Istanbul', code: 'IST'},
+      {name: 'Paris', code: 'PRS'}
+  ];
+  }
 
   ngOnInit(): void {
   }
@@ -27,6 +39,10 @@ export class LoginPageComponent implements OnInit {
   Login(){
     this.forgetPageVisible = false;
     this.createAccountVisible =false;
+  }
+
+  forgetEmail(){
+    this.forgetEMailAddress = true;
   }
 
 }

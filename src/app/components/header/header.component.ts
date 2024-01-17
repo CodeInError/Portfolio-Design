@@ -17,12 +17,7 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    const customToggler = document.querySelector('.custom-toggler') as HTMLElement;
-    const navbarNav = document.querySelector('#navbarNav') as HTMLElement;
 
-    customToggler.addEventListener('click', () => {
-      navbarNav.classList.toggle('show');
-    });
 
   }
 
