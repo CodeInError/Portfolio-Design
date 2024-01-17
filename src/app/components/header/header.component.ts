@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   displayLoginDialog: boolean = false;
+  showSignupLogin: boolean = false;
   public isNavbarCollapsed = true;
   username: string | any;
   password: string | any;
@@ -28,6 +29,7 @@ export class HeaderComponent implements OnInit {
   goToLogin(){
     // this.displayLoginDialog = true;
     this.router.navigate(['/login']);
+    this.showSignupLogin = true;
   }
 
 }

@@ -24,9 +24,12 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn-search-icon rounded-circle"><i class="bi bi-search-heart"></i></button>
       </form> -->
-      <div id="login">
-        <a (click)="goToLogin()" class="btn-login login-header">Sign Up</a>
+      <div *ngIf="!this.showSignupLogin" id="login">
+        <a (click)="goToLogin()" class="btn-login login-header">Login</a>
       </div>
+      <!-- <div *ngIf="this.showSignupLogin" id="login">
+        <a (click)="goToLogin()" class="btn-login login-header">SignUp</a>
+      </div> -->
     </div>
 
     </div>

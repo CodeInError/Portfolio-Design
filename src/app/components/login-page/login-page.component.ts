@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoginPageComponent implements OnInit {
 
   forgetPageVisible: false | any
+  createAccountVisible: false | any
 
   constructor() { }
 
@@ -16,6 +17,16 @@ export class LoginPageComponent implements OnInit {
 
   forgotPassword(){
     this.forgetPageVisible = true;
+  }
+
+  createAccount(){
+    this.forgetPageVisible = false;
+    this.createAccountVisible =true;
+  }
+
+  Login(){
+    this.forgetPageVisible = false;
+    this.createAccountVisible =false;
   }
 
 }

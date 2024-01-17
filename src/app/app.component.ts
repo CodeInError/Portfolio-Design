@@ -8,7 +8,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  hideFooter: boolean = false;
+  hideInLoginPage: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     ).subscribe((event: NavigationEnd) => {
       // List of routes where you want to hide the footer, use , then add their path
       const routesToHideFooter = ['/login'];
-      this.hideFooter = routesToHideFooter.includes(event.url);
+      this.hideInLoginPage = routesToHideFooter.includes(event.url);
     });
   }
 }
