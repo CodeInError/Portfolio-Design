@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,14 @@ export class HomeComponent implements OnInit {
 
   displayLoginDialog: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToLogin(){
-    this.displayLoginDialog = true;
+    // this.displayLoginDialog = true;
+    this.router.navigate(['/websiteDashboard']);
   }
 
 }

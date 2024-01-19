@@ -1,0 +1,196 @@
+/***
+
+====================================================================
+		Testimonial Section
+====================================================================
+
+***/
+
+.large-container {
+  position: static;
+  max-width: 1580px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+.testimonial-section {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 210px;
+  overflow: hidden;
+  &:before {
+    position: absolute;
+    left: -200px;
+    top: 22%;
+    // background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 701px;
+    height: 756px;
+    content: "";
+    -webkit-animation: fa-spin 25s infinite alternate;
+    -moz-animation: fa-spin 25s infinite alternate;
+    -ms-animation: fa-spin 25s infinite alternate;
+    -o-animation: fa-spin 25s infinite alternate;
+    animation: fa-spin 25s infinite alternate;
+  }
+  .sec-title {
+    position: relative;
+    margin-bottom: 115px;
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+  .testimonial-carousel {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 -50px;
+  }
+}
+
+.testimonial-block {
+  position: relative;
+  padding: 50px;
+  .inner-box {
+    padding: 80px 105px;
+    background-color: #ffffff;
+    box-shadow: 0 0 50px rgba(226, 222, 232, 0.75);
+  }
+  .text {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    color: #282331;
+    font-weight: 400;
+    margin-bottom: 50px;
+    font-family: "Muli", sans-serif;
+  }
+  .info-box {
+    position: relative;
+    padding-left: 115px;
+    padding-top: 10px;
+    .thumb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 82px;
+      width: 82px;
+      img {
+        border: 6px solid #e5e6fa;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        box-shadow: 0 45px 45px rgba(147, 147, 147, 0.35);
+      }
+    }
+    .name {
+      position: relative;
+      display: block;
+      font-size: 21px;
+      line-height: 1.2em;
+      color: #382c4d;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: "Niramit", sans-serif;
+    }
+    .designation {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      color: #8053f7;
+      font-weight: 400;
+      font-family: "Muli", sans-serif;
+    }
+  }
+}
+
+.testimonial-carousel {
+  .owl-nav {
+    position: absolute;
+    right: 75px;
+    bottom: 70px;
+  }
+  .owl-next, .owl-prev {
+    position: relative;
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .owl-next:hover, .owl-prev:hover {
+    background-color: #00df97;
+    box-shadow: 0 24px 24px rgba(187, 187, 187, 0.75);
+  }
+}
+
+.arrow-right, .arrow-left {
+  position: relative;
+  display: inline-block;
+  height: 9px;
+  width: 43px;
+  background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-left-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-right {
+  background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-right-2.png);
+}
+
+.testimonial-section .thumb-layer {
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  .image {
+    position: relative;
+    margin-right: 0;
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .testimonial-section .sec-title {
+    margin-bottom: 50px;
+  }
+  .testimonial-block {
+    padding: 0;
+    .inner-box {
+      box-shadow: none;
+      border: 2px solid #f1f1f1;
+    }
+  }
+  .testimonial-carousel {
+    .owl-nav {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .owl-next, .owl-prev {
+      border: 2px solid #f1f1f1;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .large-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -8,6 +8,7 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { HomeComponent } from './components/home/home.component';
 import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { WebsiteDashboardComponent } from './components/website-dashboard/website-dashboard.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
 {
   path:'login',
   component:LoginPageComponent
+},
+{
+  path:'websiteDashboard',
+  component:WebsiteDashboardComponent
 }
 ];
 

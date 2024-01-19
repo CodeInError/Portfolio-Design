@@ -25,6 +25,7 @@ import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { WebsiteDashboardComponent } from './components/website-dashboard/website-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { DropdownModule } from 'primeng/dropdown';
     FooterComponent,
     PortfolioDetailsComponent,
     BackComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    WebsiteDashboardComponent
   ],
   imports: [
     AppRoutingModule,
