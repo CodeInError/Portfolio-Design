@@ -22,4 +22,8 @@ export class WebsiteDashboardComponent implements OnInit {
     this.showTemplatePage = true;
   }
 
+  setElements(){
+    this.router.navigate(['websiteDashboard/elements']);
+  }
+
 }
