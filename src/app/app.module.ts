@@ -26,6 +26,11 @@ import { ButtonModule } from 'primeng/button';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { WebsiteDashboardComponent } from './components/website-dashboard/website-dashboard.component';
+import { ProgressBarModule } from 'primeng/progressbar';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import { WebsiteElementsComponent } from './components/website-elements/website-elements.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +45,8 @@ import { WebsiteDashboardComponent } from './components/website-dashboard/websit
     PortfolioDetailsComponent,
     BackComponent,
     LoginPageComponent,
-    WebsiteDashboardComponent
+    WebsiteDashboardComponent,
+    WebsiteElementsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -54,7 +60,9 @@ import { WebsiteDashboardComponent } from './components/website-dashboard/websit
     DialogModule,
     ButtonModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    ProgressBarModule,
+    ProgressSpinnerModule,
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]

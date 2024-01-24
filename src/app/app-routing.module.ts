@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { WebsiteDashboardComponent } from './components/website-dashboard/website-dashboard.component';
+import { WebsiteElementsComponent } from './components/website-elements/website-elements.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,9 @@ const routes: Routes = [
 {
   path:'websiteDashboard',
   component:WebsiteDashboardComponent
+},{
+  path:'websiteDashboard/elements',
+  component:WebsiteElementsComponent
 }
 ];
 
