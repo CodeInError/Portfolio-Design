@@ -19,14 +19,15 @@ export class HomeComponent implements OnInit {
   goToDashboard() {
     // Display the loader
     this.showLoader = true;
+    this.router.navigate(['/websiteDashboard']);
 
     // Set a timeout to hide the loader after 2000 milliseconds (adjust the duration as needed)
-    setTimeout(() => {
-      this.showLoader = false;
+    // setTimeout(() => {
+    //   this.showLoader = false;
 
-      // Navigate to the Dashboard
-      this.router.navigate(['/websiteDashboard']);
-    }, 2000);
+    //   // Navigate to the Dashboard
+    //   this.router.navigate(['/websiteDashboard']);
+    // }, 2000);
   }
 
 }

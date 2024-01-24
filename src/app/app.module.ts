@@ -29,6 +29,7 @@ import { WebsiteDashboardComponent } from './components/website-dashboard/websit
 import { ProgressBarModule } from 'primeng/progressbar';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { WebsiteElementsComponent } from './components/website-elements/website-elements.component';
+import {EditorModule} from 'primeng/editor';
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import { WebsiteElementsComponent } from './components/website-elements/website-
     DropdownModule,
     ProgressBarModule,
     ProgressSpinnerModule,
+    EditorModule
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]
