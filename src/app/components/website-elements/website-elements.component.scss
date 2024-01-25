@@ -1,0 +1,16 @@
+.example-chip-list {
+  width: 100%;
+}
+
+.mat-standard-chip .mat-chip-remove, .mat-standard-chip .mat-chip-trailing-icon {
+  margin-left: 3px;
+  margin-right: 0;
+  width: 17px;
+  height: 18px;
+  cursor: pointer;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #0AAD0A !important;
+}
+

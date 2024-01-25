@@ -358,7 +358,52 @@
               </form>
             </div>
           </div>
-          <div class="mb-8">5</div>
+          <!-- <div class="mb-8">
+            <mat-form-field class="example-chip-list">
+              <mat-chip-list #chipList>
+                <mat-chip *ngFor="let Links of addLinks" [selectable]="selectable"
+                         [removable]="removable" (removed)="remove(Links)">
+                  {{Links.name}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="Add New Skills"
+                       [matChipInputFor]="chipList"
+                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                       [matChipInputAddOnBlur]="addOnBlur"
+                       (matChipInputTokenEnd)="add($event)">
+              </mat-chip-list>
+            </mat-form-field>
+          </div> -->
+          <div class="mb-8">
+            <div class="fsb-d2 w-full p-realtive" style="flex-direction: column;">
+              <form class="d-flex w-full justify-between flex-wrap">
+                <h2 class="bmldrO">Add Skills</h2>
+                <div class="mb-0" style="width: 100%;">
+                  <div class="d-flex p-realtive" style="flex-direction: column;">
+                    <!-- <input name="name" id="inputname" type="text" placeholder="Enter your name"
+                      class="w-full nameInput m-0" autocomplete="off" value=""> -->
+                      <mat-form-field class="example-chip-list">
+                        <mat-chip-list #chipList>
+                          <input placeholder="Add New Skills"
+                          [matChipInputFor]="chipList"
+                          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                          [matChipInputAddOnBlur]="addOnBlur"
+                          (matChipInputTokenEnd)="add($event)">
+                        </mat-chip-list>
+                      </mat-form-field>
+                      <div>
+                        <mat-chip style="margin: 5px;" *ngFor="let Links of addLinks" [selectable]="selectable"
+                                 [removable]="removable" (removed)="remove(Links)">
+                          {{Links.name}}
+                          <!-- <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon> -->
+                          <mat-icon matChipRemove *ngIf="removable">highlight_off</mat-icon>
+                        </mat-chip>
+                      </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
           <div class="mb-8">6</div>
           <div class="mb-8">7</div>
         </div>
@@ -392,3 +437,21 @@
     </div>
   </div>
 </div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col s6">
+      <input type="text" id="lg-input" #chipInput placeholder="Add a keyword here">
+    </div>
+    <div class="col s2">
+      <button class="waves-effect waves-light btn" (click)="addChip(chipInput.value)">
+        <i class="material-icons">add</i>
+      </button>
+    </div>
+  </div>
+  <div class="chips" #chipInput></div>
+</div> -->
+
+<!-- <div>{{vChipsList |json}}</div> -->
+

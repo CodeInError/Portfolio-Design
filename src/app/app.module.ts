@@ -30,7 +30,10 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import { WebsiteElementsComponent } from './components/website-elements/website-elements.component';
 import {EditorModule} from 'primeng/editor';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,11 @@ import {EditorModule} from 'primeng/editor';
     DropdownModule,
     ProgressBarModule,
     ProgressSpinnerModule,
-    EditorModule
+    EditorModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    MatIconModule
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]

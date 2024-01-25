@@ -1,3 +1,38 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$PortFolio-primary: mat.define-palette(mat.$indigo-palette);
+$PortFolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$PortFolio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$PortFolio-theme: mat.define-light-theme((
+  color: (
+    primary: $PortFolio-primary,
+    accent: $PortFolio-accent,
+    warn: $PortFolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($PortFolio-theme);
+
 /* You can add global styles to this file, and also import other style files */
 /**
 * Template Name: Kelly
@@ -4506,6 +4541,10 @@ svg:not(:root) {
   height: 0.75rem;
 }
 
+.m-5 {
+  margin: 5px;
+}
+
 .preview-sidebar{
   --tw-bg-opacity: 1;
   background-color: rgb(255 96 92/var(--tw-bg-opacity));
@@ -4769,3 +4808,6 @@ svg:not(:root) {
 }
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
