@@ -1586,6 +1586,7 @@ body {
    height: 100%;
   //  opacity: .2;
    background-color: #000000;
+  //  background-image: url("assets/img/BI-3.png");
  }
 
  .no-js #home {
@@ -3961,6 +3962,7 @@ svg:not(:root) {
   line-height: 1rem;
   margin-top: 10px;
   padding-left: 6px;
+  margin: 9px 0 9px !important;
 }
 
 .web-elements-container{
@@ -4081,7 +4083,7 @@ svg:not(:root) {
 }
 
 .eds-s2{
-  background-image: linear-gradient(90deg, rgb(236, 0, 140), rgb(252, 103, 103));
+  background-image: linear-gradient(90deg, #0AAD0A, #0AAD0A);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -4116,6 +4118,11 @@ svg:not(:root) {
   align-items: center;
   display: grid;
   top: 2rem;
+}
+
+.personalWebsite {
+  margin: 0 0 2px !important;
+  font-size: 2rem !important;
 }
 
 .sideBar-h-a{
@@ -4306,10 +4313,12 @@ svg:not(:root) {
 }
 
 .bmldrO {
-  font-weight: 800;
-    line-height: 1;
-    color: rgb(32, 14, 50);
-    margin-bottom: 2.5rem;
+  font-weight: 800 !important;
+    line-height: 1 !important;
+    color: rgb(32, 14, 50) !important;
+    margin-bottom: 2.5rem !important;
+    font-size: 30px !important;
+    font-family: "Raleway", sans-serif !important;
 }
 
 .mb-6 {
@@ -4565,6 +4574,185 @@ svg:not(:root) {
     --tw-bg-opacity: 1;
     background-color: rgb(0 202 78/var(--tw-bg-opacity));
 }
+
+// .elementNav .elementBelow-1.active {
+//   background-color: #c5eec5;
+// }
+
+.elementNav .elementBelow-1.active svg {
+  fill: #ff0000; /* Change this to your desired active color */
+}
+
+.elementBelow-1 .ed-s1 .eds-s1.active svg {
+  fill: #ff0000;
+}
+
+.text-textMedium {
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66/var(--tw-text-opacity));
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.DI-1 {
+  width: 100%;
+}
+
+.BI-button{
+  --tw-text-opacity: 1;
+  color: rgb(32 14 50/var(--tw-text-opacity));
+  font-weight: 800;
+  font-size: 15px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(238 240 244/var(--tw-border-opacity));
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  min-width: 120px;
+  height: 4.5rem;
+  display: flex;
+  background-color: #0AAD0A;
+}
+
+.mb-8 .fsb-d1 .fsb-d1-h2 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  color: rgb(32, 14, 50) !important;
+  margin-bottom: 1.5rem !important;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.bmldrO {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  color: rgb(32, 14, 50) !important;
+  margin-bottom: 1.5rem !important;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.BG-Section {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.BG-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+}
+
+.BG-L1 {
+  cursor: pointer;
+}
+
+.BG-B1 {
+  border: 1px solid #CDCDCD;
+  // color: rgb(75, 85, 220);
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 4.5rem;
+}
+
+.BG-DsignArea {
+  margin-right: 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.BG-L1.active {
+  // border: 1px solid rgb(75, 85, 220);
+  background-color: #0AAD0A; /* Set the desired background color when active */
+  color: #ffffff; /* Set the text color for better visibility */
+  border-radius: 12px;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.BG-L1 {
+  cursor: pointer; /* Add cursor pointer for clickable effect */
+  /* Add other styling as needed */
+}
+
+.Solid-L {
+  cursor: pointer;
+}
+
+.Solid-L-I {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+}
+
+.radioButton {
+  margin-right: 16px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-weight: bold;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.radioButton::before {
+  content: "\f26e";
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  right: 0;
+  left: -2px;
+  margin: auto;
+  text-align: center;
+  font-family: bootstrap-icons!important;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.radioButton.active::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.radioButton.active {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+
 // ...................Media Query Start.............
 
 @media (min-width: 774px){
