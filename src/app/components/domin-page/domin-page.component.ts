@@ -3,11 +3,11 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-website-elements',
-  templateUrl: './website-elements.component.html',
-  styleUrls: ['./website-elements.component.scss']
+  selector: 'app-domin-page',
+  templateUrl: './domin-page.component.html',
+  styleUrls: ['./domin-page.component.scss']
 })
-export class WebsiteElementsComponent implements OnInit {
+export class DominPageComponent implements OnInit {
   visible = true;
   selectable = true;
   removable = true;
@@ -50,6 +50,8 @@ export class WebsiteElementsComponent implements OnInit {
       this.addLinks.splice(index, 1);
     }
   }
+
+
 }
 
 // Define the Fruit type using TypeScript interface

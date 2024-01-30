@@ -3,11 +3,11 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-website-elements',
-  templateUrl: './website-elements.component.html',
-  styleUrls: ['./website-elements.component.scss']
+  selector: 'app-custom-design',
+  templateUrl: './custom-design.component.html',
+  styleUrls: ['./custom-design.component.scss'],
 })
-export class WebsiteElementsComponent implements OnInit {
+export class CustomDesignComponent implements OnInit {
   visible = true;
   selectable = true;
   removable = true;
@@ -21,6 +21,9 @@ export class WebsiteElementsComponent implements OnInit {
     { name: 'Angular' },
     { name: 'nodeJS' },
   ];
+  selectedOption: string = 'solid'; // Track the selected option
+  selectedColor: string = 'fff';
+  colors: string[] = ['fff','#FF5733', '#33FF57', '#5733FF'];
 
   constructor(private router: Router) { }
 
@@ -50,6 +53,17 @@ export class WebsiteElementsComponent implements OnInit {
       this.addLinks.splice(index, 1);
     }
   }
+
+  showDesignArea(option: string): void {
+    this.selectedOption = option;
+  }
+
+  selectColor(color: string): void {
+    console.log('Sameer => color', color);
+    this.selectedColor = color;
+  }
+
+
 }
 
 // Define the Fruit type using TypeScript interface
