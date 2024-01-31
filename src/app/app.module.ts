@@ -36,6 +36,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { CustomDesignComponent } from './components/custom-design/custom-design.component';
 import { DominPageComponent } from './components/domin-page/domin-page.component';
+import {ColorPickerModule} from 'primeng/colorpicker';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { DominPageComponent } from './components/domin-page/domin-page.component
     MatInputModule,
     MatFormFieldModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    ColorPickerModule
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]

@@ -22,8 +22,16 @@ export class CustomDesignComponent implements OnInit {
     { name: 'nodeJS' },
   ];
   selectedOption: string = 'solid'; // Track the selected option
-  selectedColor: string = 'fff';
-  colors: string[] = ['fff','#FF5733', '#33FF57', '#5733FF'];
+  selectedColor: string = '#000';
+  colors: string[] = ['#000','#3a3844', '#4d4730', '#f4ead8','#cf6b87','#5d2a42','#71719a','#6a8b7c','#fcb1a6',
+                      '#dd7373','#aea3b0', '#29335c', '#114b5f', '#028090', '#a23b72', '#eaf0ce','#c0c5c1', '#7d8491',
+                      '#f7d4bc'];
+  gradientColors: string[] = [
+                        'linear-gradient(90deg, #3a3844, #4d4730)',
+                        'linear-gradient(90deg, #f4ead8, #cf6b87)',
+                        'linear-gradient(90deg, #5d2a42, #71719a)'
+                      ];
+  selectedGradient: string | any;
 
   constructor(private router: Router) { }
 
@@ -61,6 +69,11 @@ export class CustomDesignComponent implements OnInit {
   selectColor(color: string): void {
     console.log('Sameer => color', color);
     this.selectedColor = color;
+  }
+
+  selectGradient(gradient: string): void {
+    console.log('Selected Gradient:', gradient);
+    this.selectedColor = gradient;
   }
 
 

@@ -4707,11 +4707,12 @@ svg:not(:root) {
 }
 
 .radioButton {
-  margin-right: 16px;
+  margin-right: 7px;
+  margin-left: 15px;
   margin-bottom: 8px;
   margin-top: 8px;
   font-weight: bold;
-  display: flex;
+  display: inline-block;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
@@ -4750,6 +4751,40 @@ svg:not(:root) {
 
 .radioButton.active {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+::ng-deep .mat-body, .mat-body-1, .mat-typography {
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.selected-color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-color {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px; /* Adjust as needed */
+  border: 1px solid #000;
+  border-radius: 5px; /* Add border radius if desired */
+}
+
+.BG-DsignArea-G{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.gradient-L {
+  cursor: pointer;
+    height: 70px;
+    width: 100%;
+    background-image: linear-gradient(109.1deg, rgb(181, 73, 91) 7.1%, rgb(225, 107, 140) 86.4%);
+    border-radius: 12px;
+    border: 1px solid rgb(119, 119, 119);
 }
 
 

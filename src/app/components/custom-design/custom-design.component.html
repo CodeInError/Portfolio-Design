@@ -124,14 +124,17 @@
               </div>
               <div>
                 <div class="BG-DsignArea" *ngIf="selectedOption === 'solid'">
-                  <label class="Solid-L d-flex">
-                    <div class="radioButton" *ngFor="let color of colors" [style.background-color]="color"  [class.active]="selectedColor === color" (click)="selectColor(color)"></div>
+                  <label class="Solid-L">
+                    <div class="radioButton" *ngFor="let color of colors" [style.background-color]="color" [class.active]="selectedColor === color" (click)="selectColor(color)"></div>
                   </label>
                 </div>
 
-                <div class="BG-DsignArea" *ngIf="selectedOption === 'gradient'">
-                  test 2222222
+                <div class="BG-DsignArea-G" *ngIf="selectedOption === 'gradient'">
+                  <div *ngFor="let gradient of gradientColors" class="gradient-L" [ngStyle]="{ 'background': gradient }" (click)="selectGradient(gradient)">
+                    <!-- You can add more content inside each gradient div if needed -->
+                  </div>
                 </div>
+
                 <div class="BG-DsignArea" *ngIf="selectedOption === 'image'">
                   test 3
                 </div>
@@ -383,7 +386,9 @@
               </form>
             </div>
           </div>
-          <div class="mb-8">6</div>
+          <div class="mb-8">
+           6
+          </div>
           <div class="mb-8">7</div>
         </div>
       </div>
@@ -405,7 +410,7 @@
                               </div>
                             </div>
                         </div>
-                        <iframe src="http://localhost:63869/login" frameborder="0" style="width: 1440px; height: 900px; pointer-events: none; background-color: black;"></iframe>
+                        <iframe src="" class="selected-color" [style.background]="selectedColor" frameborder="0" style="width: 1440px; height: 900px; pointer-events: none;"></iframe>
                       </div>
                       <div></div>
                     </div>
@@ -433,5 +438,8 @@
 </div> -->
 
 <!-- <div>{{vChipsList |json}}</div> -->
+
+
+
 
 
