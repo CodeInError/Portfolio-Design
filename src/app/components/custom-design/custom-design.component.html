@@ -130,8 +130,7 @@
                 </div>
 
                 <div class="BG-DsignArea-G" *ngIf="selectedOption === 'gradient'">
-                  <div *ngFor="let gradient of gradientColors" class="gradient-L" [ngStyle]="{ 'background': gradient }" (click)="selectGradient(gradient)">
-                    <!-- You can add more content inside each gradient div if needed -->
+                  <div *ngFor="let gradient of gradientColors" class="gradientL" [ngStyle]="{ 'background': gradient }" (click)="selectGradient(gradient)">
                   </div>
                 </div>
 
