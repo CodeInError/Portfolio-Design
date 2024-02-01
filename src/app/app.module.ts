@@ -34,8 +34,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomDesignComponent } from './components/custom-design/custom-design.component';
-import { DominPageComponent } from './components/domin-page/domin-page.component';
 import {ColorPickerModule} from 'primeng/colorpicker';
 
 @NgModule({
@@ -53,9 +51,7 @@ import {ColorPickerModule} from 'primeng/colorpicker';
     BackComponent,
     LoginPageComponent,
     WebsiteDashboardComponent,
-    WebsiteElementsComponent,
-    CustomDesignComponent,
-    DominPageComponent,
+    WebsiteElementsComponent
   ],
   imports: [
     AppRoutingModule,

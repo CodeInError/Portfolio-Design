@@ -10,8 +10,6 @@ import { PortfolioDetailsComponent } from './components/portfolio-details/portfo
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { WebsiteDashboardComponent } from './components/website-dashboard/website-dashboard.component';
 import { WebsiteElementsComponent } from './components/website-elements/website-elements.component';
-import { CustomDesignComponent } from './components/custom-design/custom-design.component';
-import { DominPageComponent } from './components/domin-page/domin-page.component';
 
 const routes: Routes = [
   {
@@ -52,14 +50,6 @@ const routes: Routes = [
 },{
   path:'websiteDashboard/elements',
   component:WebsiteElementsComponent
-},
-{
-  path:'websiteDashboard/design',
-  component:CustomDesignComponent
-},
-{
-  path:'websiteDashboard/Domain',
-  component:DominPageComponent
 }
 ];
 

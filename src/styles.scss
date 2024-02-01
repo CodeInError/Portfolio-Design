@@ -4082,12 +4082,6 @@ svg:not(:root) {
   align-items: center;
 }
 
-.eds-s2{
-  background-image: linear-gradient(90deg, #0AAD0A, #0AAD0A);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .sideBar{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -4105,7 +4099,7 @@ svg:not(:root) {
 }
 
 .sticky {
-  position: static;
+  position: sticky;
 }
 
 .sideBar-grid {
@@ -4784,6 +4778,29 @@ svg:not(:root) {
     width: 100%;
     border-radius: 12px;
     border: 1px solid rgb(119, 119, 119);
+}
+
+.elementBelow-1.active-link .ed-s1 .eds-s1 svg path{
+  fill: #EE1E96;
+}
+.elementBelow-1 .ed-s1 .eds-s2 {
+  color: #0AAD0A;
+}
+.elementBelow-1.active-link .ed-s1 .eds-s2 {
+  color: #EE1E96;
+}
+
+.colorPicker {
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+::ng-deep .colorPicker .p-colorpicker .p-colorpicker-preview  {
+  background-color: conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82) !important;
+}
+
+:host ::ng-deep .p-colorpicker {
+  background-color: #ffffff; /* Set your desired background color */
 }
 
 // ...................Media Query Start.............
