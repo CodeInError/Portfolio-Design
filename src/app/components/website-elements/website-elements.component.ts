@@ -53,6 +53,9 @@ cardsData = [
   { title: 'Card 4', imageSrc: 'assets/img/card-1.webp' },
   // Add more cards as needed
 ];
+colorPicker: any;
+gradient: string | any;
+
 
 cardArray(array: any[], cardSize: number): any[] {
   const cards = [];
@@ -62,7 +65,6 @@ cardArray(array: any[], cardSize: number): any[] {
   console.log('Sameer => cards ', cards);
   return cards;
 }
-
 
   constructor(private router: Router) { }
 
@@ -105,6 +107,20 @@ cardArray(array: any[], cardSize: number): any[] {
   selectGradient(gradient: string): void {
     console.log('Selected Gradient:', gradient);
     this.selectedColor = gradient;
+  }
+
+  selectColorPicker(colorPicker: any){
+    console.log('Sameer => colorPicker', colorPicker);
+    this.selectedColor = colorPicker.value;
+  }
+
+  updateGradient() {
+    const color1 = (document.getElementById('color1') as HTMLInputElement).value;
+    const color2 = (document.getElementById('color2') as HTMLInputElement).value;
+    const degree = (document.getElementById('degree') as HTMLInputElement).value || 0;
+
+    this.gradient = `linear-gradient(${degree}deg, ${color1}, ${color2})`;
+    this.selectedColor = this.gradient;
   }
 
   onSelectCard(card : any){

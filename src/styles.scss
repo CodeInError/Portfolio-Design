@@ -4790,17 +4790,15 @@ svg:not(:root) {
   color: #EE1E96;
 }
 
-.colorPicker {
-  border-radius: 12px;
-  font-size: 20px;
+.colorPickerArea{
+  margin-left: 65px;
+  margin-top: -67px;
 }
 
-::ng-deep .colorPicker .p-colorpicker .p-colorpicker-preview  {
+::ng-deep.colorPickerArea .round-color-picker .p-colorpicker-overlay .p-inputtext {
   background-color: conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82) !important;
-}
-
-:host ::ng-deep .p-colorpicker {
-  background-color: #ffffff; /* Set your desired background color */
+  border-radius: 16px !important;
+  padding: 1.3rem 1.3rem !important;
 }
 
 // ...................Media Query Start.............

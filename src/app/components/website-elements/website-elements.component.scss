@@ -14,3 +14,53 @@
   background-color: #0AAD0A !important;
 }
 
+.gradient-color-picker {
+  position: relative;
+  width: 200px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.color-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.color-picker-handle {
+  position: absolute;
+  top: -3px;
+  width: 10px;
+  height: 26px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background: transparent;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.gradientP {
+  margin: 15px 0 10px 0;
+  text-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: large;
+  font-weight: 400;
+}
+
+.borderArea{
+  border: none !important;
+}
+.setArea {
+  margin-top: 21px;
+  border-radius: 0px;
+  height: 29px;
+  border: 1px solid black;
+  font-weight: bold;
+  text-align: center;
+}
+

@@ -394,19 +394,28 @@
                 </div>
               </div>
               <div>
-                <!-- website-elements.component.html -->
-
                 <div class="BG-DsignArea" *ngIf="selectedOption === 'solid'">
                   <label class="Solid-L">
                     <div class="radioButton" *ngFor="let color of colors"
                     [style.background-color]="color" [class.active]="selectedColor === color" (click)="selectColor(color)"></div>
-                    <!-- <p-colorPicker  [(ngModel)]="selectedColor" styleClass="colorPicker" [style]="{'background-color': '#ffffff'}"></p-colorPicker> -->
                   </label>
+
+                  <p class="text-textMedium gradientP">Create Your Own Gradient Background</p>
+                  <div class=" BG-DsignArea-G">
+                    <p-colorPicker (onChange)="selectColorPicker($event)" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker"></p-colorPicker>
+                  </div>
                 </div>
 
-
-                <div class="BG-DsignArea-G" *ngIf="selectedOption === 'gradient'">
-                  <div *ngFor="let gradient of gradientColors" class="gradientL" [ngStyle]="{ 'background': gradient }" (click)="selectGradient(gradient)">
+                <div *ngIf="selectedOption === 'gradient'">
+                  <div class="BG-DsignArea-G" *ngIf="selectedOption === 'gradient'">
+                    <div *ngFor="let gradient of gradientColors" class="gradientL" [ngStyle]="{ 'background': gradient }" (click)="selectGradient(gradient)">
+                    </div>
+                  </div>
+                  <p class="text-textMedium gradientP">Create Your Own Gradient Background</p>
+                  <div class=" BG-DsignArea-G">
+                    <input class="gradientL borderArea" id="color1" type="color" value="#86fcff" (input)="updateGradient()">
+                    <input class="gradientL borderArea" id="color2" type="color" value="#ff91e3" (input)="updateGradient()">
+                    <input class="gradientL setArea" id="degree" type="number" min="0" max="360" placeholder="Degree" (input)="updateGradient()">
                   </div>
                 </div>
 
