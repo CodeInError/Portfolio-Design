@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       // List of routes where you want to hide the footer, use , then add their path
-      const routesToHideFooter = ['/login', '/ownPage', '/websiteDashboard', '/websiteDashboard/elements', '/websiteDashboard/design'];
+      const routesToHideFooter = ['/login', '/ownPage', '/websiteDashboard', '/websiteDashboard/elements', '/PortfolioDisplay'];
       this.hideInLoginPage = routesToHideFooter.includes(event.url);
     });
   }

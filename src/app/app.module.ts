@@ -35,6 +35,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import {ColorPickerModule} from 'primeng/colorpicker';
+import { PortfolioDisplayComponent } from './components/portfolio-display/portfolio-display.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {ColorPickerModule} from 'primeng/colorpicker';
     BackComponent,
     LoginPageComponent,
     WebsiteDashboardComponent,
-    WebsiteElementsComponent
+    WebsiteElementsComponent,
+    PortfolioDisplayComponent
   ],
   imports: [
     AppRoutingModule,

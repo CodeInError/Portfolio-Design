@@ -64,3 +64,41 @@
   text-align: center;
 }
 
+.header-color-selection {
+  background: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.color-picker-section, .gradient-section {
+  margin-bottom: 20px;
+}
+
+.color-picker-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.color-picker {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+}
+
+.gradient-color-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.degree-input {
+  display: flex;
+  align-items: center;
+}
+
+.degree {
+  width: 60px;
+  margin-left: 10px;
+}
+
+

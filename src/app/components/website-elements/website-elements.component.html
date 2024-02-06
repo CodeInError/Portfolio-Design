@@ -126,7 +126,7 @@
                 <div class="mb-0" style="width: 100%;">
                   <div class="items-center d-flex p-realtive">
                     <input name="name" id="inputname" type="text" placeholder="Enter your name"
-                      class="w-full nameInput m-0" autocomplete="off" value="">
+                           class="w-full nameInput m-0" autocomplete="off" [(ngModel)]="name" (ngModelChange)="enterNameData()">
                   </div>
                 </div>
               </form>
@@ -139,7 +139,7 @@
                 <div class="mb-0" style="width: 100%;">
                   <div class="items-center d-flex p-realtive">
                     <input name="name" id="inputname" type="text" placeholder="Enter your Job Title"
-                      class="w-full nameInput m-0" autocomplete="off" value="">
+                      class="w-full nameInput m-0" autocomplete="off" value="" [(ngModel)]="jobTitle" (ngModelChange)="enterJobData()">
                   </div>
                 </div>
               </form>
@@ -399,10 +399,10 @@
                     <div class="radioButton" *ngFor="let color of colors"
                     [style.background-color]="color" [class.active]="selectedColor === color" (click)="selectColor(color)"></div>
                   </label>
-
-                  <p class="text-textMedium gradientP">Create Your Own Solid Background</p>
-                  <div class=" BG-DsignArea-G">
-                    <p-colorPicker (onChange)="selectColorPicker($event)" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker"></p-colorPicker>
+                  <div class="">
+                    <p class="text-textMedium gradientP">Create Your Own Solid Background</p>
+                    <!-- <p-colorPicker (onChange)="selectColorPicker($event)" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker"></p-colorPicker> -->
+                    <input type="color" id="colorPicker" class="color-picker" (onChange)="selectColorPicker($event)" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker">
                   </div>
                 </div>
 
@@ -459,17 +459,29 @@
           </div>
           <div class="mb-8">
             <div class="fsb-d2 w-full p-realtive">
-              <form class="d-flex w-full justify-between flex-wrap">
-                <h2 class="bmldrO">Job Title</h2>
-                <div class="mb-0" style="width: 100%;">
-                  <div class="items-center d-flex p-realtive">
-                    <input name="name" id="inputname" type="text" placeholder="Enter your Job Title"
-                      class="w-full nameInput m-0" autocomplete="off" value="">
+                  <h2 class="bmldrO">Header</h2>
+                  <p class="text-textMedium gradientP" style="text-align: start;">Create Your Own Header Color</p>
+                  <div class="color-picker-wrapper">
+                    <input type="color" id="colorPicker" class="color-picker cursor-pointer" [(ngModel)]="colorPicker" (input)="updateHeaderColor(colorPicker)">
                   </div>
-                </div>
-              </form>
+                  <div>
+                    <p class="text-textMedium gradientP" style="text-align: start;">Create Your Own Gradient Header</p>
+                      <div class="d-flex">
+                        <div class="color-picker-wrapper">
+                          <input type="color" id="color1" class="color-picker cursor-pointer" name="color1"  value="#86fcff" [(ngModel)]="gradientColor1" (input)="updateHeaderGradient()">
+                        </div>
+                        <div class="color-picker-wrapper">
+                          <input type="color" id="color2" class="color-picker cursor-pointer" name="color2" [(ngModel)]="gradientColor2" (input)="updateHeaderGradient()">
+                        </div>
+                        <div class="degree-input">
+                          <label for="degree">Degree:</label>
+                          <input type="number" id="degree" class="degree cursor-pointer" name="degree" min="0" max="360" placeholder="Degree" [(ngModel)]="gradientDegree" (input)="updateHeaderGradient()">
+                        </div>
+                      </div>
+                 </div>
             </div>
           </div>
+
           <div class="mb-8">
             <div class="fsb-d2 w-full p-realtive">
               <form class="d-flex w-full justify-between flex-wrap">
@@ -714,7 +726,9 @@
                             </div>
                           </div>
                       </div>
-                      <iframe src="" class="selected-color" [style.background]="selectedColor" frameborder="0" style="width: 1440px; height: 900px; pointer-events: none;"></iframe>
+                      <!-- <iframe src="http://localhost:53135/PortfolioDisplay" class="selected-color" [style.background]="selectedColor" frameborder="0" style="width: 1440px; height: 900px; pointer-events: none;"></iframe> -->
+                      <!-- parent.component.html -->
+                      <app-portfolio-display  style="width: 1440px; height: 900px;"></app-portfolio-display>
                     </div>
                     <div></div>
                   </div>

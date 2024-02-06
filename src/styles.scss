@@ -611,12 +611,6 @@ body {
     background: #3dc8b7;
   }
 
-  #login .login-header{
-    // position: fixed;
-    // right: 18px;
-    // top: 15px;
-  }
-
   @media (min-width: 1024px) {
     #hero {
       background-attachment: fixed;
@@ -3778,7 +3772,6 @@ svg:not(:root) {
   width: 1rem;
   margin-left: 0.5rem;
   display: block;
-  vertical-align: middle;
 }
 
 .br-c{
@@ -3805,14 +3798,6 @@ svg:not(:root) {
   margin-top: 7rem;
   padding-bottom: 4rem;
   padding-top: 4rem;
-}
-
-.modal-content{
-  // border-radius: 0.75rem;
-  // align-items: center;
-  // align-items: flex-start;
-  // display: flex;
-  // z-index: 101;
 }
 
 .mdl-bdy{
@@ -3888,7 +3873,6 @@ svg:not(:root) {
 .w-20 {
   width: 9rem;
   display: block;
-  vertical-align: middle;
 }
 
 .modal-backdrop .fade .in {

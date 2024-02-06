@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Router } from '@angular/router';
+import { SharedDataService } from '../services/shared-data.service';
 
 @Component({
   selector: 'app-website-elements',
@@ -23,7 +24,13 @@ export class WebsiteElementsComponent implements OnInit {
   ];
 
   selectedOption: string = 'solid'; // Track the selected option
-  selectedColor: string = '#000';
+  selectedColor: string = '';
+  selectedColorGradient: string ='';
+  selectedColorPicker: string ='';
+  selectedGridentColorPicker: string ='';
+  selectedImageURL: any = '';
+  name: string = '';
+  jobTitle: string ='';
   colors: string[] = ['#000','#3a3844', '#4d4730', '#f4ead8','#cf6b87','#5d2a42','#71719a','#6a8b7c','#fcb1a6',
                       '#dd7373','#aea3b0', '#29335c', '#114b5f', '#028090', '#a23b72', '#eaf0ce','#c0c5c1', '#7d8491',
                       '#f7d4bc'];
@@ -44,9 +51,9 @@ showCustomizePage =false;
 showDominPage =false;
 activeSection: string = 'element';
 cardsData = [
-  { title: 'Card 1', imageSrc: 'assets/img/card-1.webp' },
-  { title: 'Card 2', imageSrc: 'assets/img/card-2.webp' },
-  { title: 'Card 3', imageSrc: 'assets/img/card-3.webp' },
+  { title: 'Card 1', imageSrc: 'assets/img/card-7.jpg' },
+  { title: 'Card 2', imageSrc: 'assets/img/card-1.webp' },
+  { title: 'Card 3', imageSrc: 'assets/img/card-9.jpg' },
   { title: 'Card 4', imageSrc: 'assets/img/card-4.webp' },
   { title: 'Card 4', imageSrc: 'assets/img/card-5.webp' },
   { title: 'Card 4', imageSrc: 'assets/img/card-6.webp' },
@@ -55,8 +62,20 @@ cardsData = [
 ];
 colorPicker: any;
 gradient: string | any;
+selectDesignValue = {
+  colorValue: '',
+  nameInputValue: '',
+  jobInputValue: '',
+  headerColorValue:''
 
-
+};
+enterName: any;
+enterJobTitle: any;
+selectHeaderColor: any;
+gradientColor1: string = '#ffffff'; // Default color 1
+gradientColor2: string = '#000000'; // Default color 2
+gradientDegree: number = 0;
+Headergradient: any;
 cardArray(array: any[], cardSize: number): any[] {
   const cards = [];
   for (let i = 0; i < array.length; i += cardSize) {
@@ -66,22 +85,35 @@ cardArray(array: any[], cardSize: number): any[] {
   return cards;
 }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private sharedDataService: SharedDataService) { }
+
+  ngOnChanges(changes: any) {
+    console.log('Sameer =>change ', changes);
+  }
 
   ngOnInit(): void {
-    // Your initialization logic here
+    console.log('Sameer => selectDesignValue', this.selectDesignValue);
+  }
+
+
+  emitSelectedDesignValues(): void {
+    this.selectDesignValue = {
+      colorValue: this.selectedColor,
+      nameInputValue: this.enterName,
+      jobInputValue: this.enterJobTitle,
+      headerColorValue: this.selectHeaderColor,
+    };
+    this.sharedDataService.newLocationAdded.emit(this.selectDesignValue);
   }
 
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
 
-    // Add a fruit if a value is entered
     if (value?.trim()) {
       this.addLinks.push({ name: value.trim() });
     }
 
-    // Reset the input value
     if (input) {
       input.value = '';
     }
@@ -102,16 +134,25 @@ cardArray(array: any[], cardSize: number): any[] {
   selectColor(color: string): void {
     console.log('Sameer => color', color);
     this.selectedColor = color;
+    this.emitSelectedDesignValues();
   }
 
   selectGradient(gradient: string): void {
     console.log('Selected Gradient:', gradient);
     this.selectedColor = gradient;
+    this.emitSelectedDesignValues();
   }
 
   selectColorPicker(colorPicker: any){
     console.log('Sameer => colorPicker', colorPicker);
     this.selectedColor = colorPicker.value;
+    this.emitSelectedDesignValues();
+  }
+
+  updateHeaderColor(colorPicker: any){
+    console.log('Sameer => colorPicker12222', colorPicker);
+    this.selectHeaderColor = colorPicker;
+    this.emitSelectedDesignValues();
   }
 
   updateGradient() {
@@ -121,11 +162,30 @@ cardArray(array: any[], cardSize: number): any[] {
 
     this.gradient = `linear-gradient(${degree}deg, ${color1}, ${color2})`;
     this.selectedColor = this.gradient;
+    this.emitSelectedDesignValues();
+  }
+
+  updateHeaderGradient(): void {
+    this.selectHeaderColor = `linear-gradient(${this.gradientDegree}deg, ${this.gradientColor1}, ${this.gradientColor2})`;
+    this.emitSelectedDesignValues();
   }
 
   onSelectCard(card : any){
     console.log('Sameer => card', card);
     this.selectedColor = `url(${card.imageSrc}) no-repeat center / cover`
+    this.emitSelectedDesignValues();
+  }
+
+  enterNameData(){
+    console.log('Name changed:', this.name);
+    this.enterName = this.name;
+    this.emitSelectedDesignValues();
+  }
+
+  enterJobData(){
+    console.log('Sameer => this.jobTitle', this.jobTitle);
+    this.enterJobTitle = this.jobTitle;
+    this.emitSelectedDesignValues();
   }
 
   goToELementPage(){
@@ -150,7 +210,6 @@ cardArray(array: any[], cardSize: number): any[] {
   }
 }
 
-// Define the Fruit type using TypeScript interface
 interface Link {
   name: string;
 }
