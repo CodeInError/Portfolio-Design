@@ -17,6 +17,7 @@ export class PortfolioDisplayComponent implements OnInit {
   nameInputValue: any;
   jobInputValue: any;
   public subscription: Subscription | any;
+  profilePhoto: any;
 
   constructor(private sharedDataService: SharedDataService) { }
   ngOnChanges(changes: any) {
@@ -30,6 +31,7 @@ export class PortfolioDisplayComponent implements OnInit {
       this.nameInputValue = name.nameInputValue;
       this.jobInputValue = name.jobInputValue;
     });
+    this.profilePhoto = sessionStorage.getItem('profilePhoto');
   }
 
   ngOnDestroy() {

@@ -81,7 +81,7 @@
 
       <div class="fillSideBar-data w-full" *ngIf="showElementPage">
         <div class="fillSiderBar-D1 w-full">
-          <div class="mb-8">
+          <!-- <div class="mb-8">
             <div class="fsb-d1 w-full p-realtive">
               <h2 class="fsb-d1-h2">Photo</h2>
               <div class="w-full d-flex">
@@ -118,7 +118,47 @@
                 </div>
               </div>
             </div>
+          </div> -->
+          <div class="mb-8">
+            <div class="fsb-d1 w-full p-realtive">
+              <h2 class="fsb-d1-h2">Photo</h2>
+              <div class="w-full d-flex">
+                <div class="bAflBM">
+                  <div class="jNfpMw">
+                    <svg version="1.1" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet">
+                      <title>camera-solid</title>
+                      <path
+                        d="M32,8H24.7L23.64,5.28A2,2,0,0,0,21.78,4H14.22a2,2,0,0,0-1.87,1.28L11.3,8H4a2,2,0,0,0-2,2V30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V10A2,2,0,0,0,32,8ZM6.17,13.63a.8.8,0,0,1,0-1.6h2.4a.8.8,0,0,1,0,1.6ZM18,28a9,9,0,1,1,9-9A9,9,0,0,1,18,28Z">
+                      </path>
+                      <path
+                        d="M11.11,19.06a7.07,7.07,0,0,0,4.11,6.41l1.09-1.74a5,5,0,1,1,5.22-8.39l1.09-1.76a7.06,7.06,0,0,0-11.51,5.48Z">
+                      </path>
+                      <rect x="0" y="0" width="36" height="36" fill-opacity="0"></rect>
+                    </svg>
+                  </div>
+                </div>
+                <div class="jmcFxS">
+                  <label for="photoUpload" class="font-extrabold addPhoto d-flex">
+                    <span class="addPhoto-s d-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" class="w-svg-14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M6.704 1.627H4.523c-1.794 0-2.919 1.27-2.919 3.068v4.85c0 1.797 1.12 3.067 2.919 3.067H9.67c1.8 0 2.92-1.27 2.92-3.068v-2.35">
+                        </path>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M5.15 6.37l4.36-4.359a1.391 1.391 0 011.966 0l.71.71a1.39 1.39 0 010 1.967l-4.38 4.38c-.238.237-.56.37-.896.37H4.725l.054-2.204c.009-.324.141-.634.37-.864z"
+                          clip-rule="evenodd"></path>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M8.847 2.685l2.663 2.663"></path>
+                      </svg>
+                    </span>
+                    Add Photo
+                  </label>
+                  <input type="file" id="photoUpload" name="photoUpload" accept="image/*" style="display: none" (change)="onFileSelected($event)">
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="mb-8">
             <div class="fsb-d2 w-full p-realtive">
               <form class="d-flex w-full justify-between flex-wrap">
@@ -402,7 +442,7 @@
                   <div class="">
                     <p class="text-textMedium gradientP">Create Your Own Solid Background</p>
                     <!-- <p-colorPicker (onChange)="selectColorPicker($event)" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker"></p-colorPicker> -->
-                    <input type="color" id="colorPicker" class="color-picker" (onChange)="selectColorPicker($event)" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker">
+                    <input type="color" id="colorPicker" class="color-picker" (input)="selectColorPicker()" [ngStyle]="{ 'background': 'conic-gradient(from 90deg, violet, indigo, blue, green, yellow, orange, red, violet) rgb(43, 161, 82)'}" class="round-color-picker">
                   </div>
                 </div>
 

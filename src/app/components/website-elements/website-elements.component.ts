@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Router } from '@angular/router';
 import { SharedDataService } from '../services/shared-data.service';
+import { SessionStorageService } from '../services/SessionService/session-storage.service';
 
 @Component({
   selector: 'app-website-elements',
@@ -29,6 +30,7 @@ export class WebsiteElementsComponent implements OnInit {
   selectedColorPicker: string ='';
   selectedGridentColorPicker: string ='';
   selectedImageURL: any = '';
+  selectedPhotoURL: any = '';
   name: string = '';
   jobTitle: string ='';
   colors: string[] = ['#000','#3a3844', '#4d4730', '#f4ead8','#cf6b87','#5d2a42','#71719a','#6a8b7c','#fcb1a6',
@@ -51,13 +53,13 @@ showCustomizePage =false;
 showDominPage =false;
 activeSection: string = 'element';
 cardsData = [
-  { title: 'Card 1', imageSrc: 'assets/img/card-7.jpg' },
-  { title: 'Card 2', imageSrc: 'assets/img/card-1.webp' },
-  { title: 'Card 3', imageSrc: 'assets/img/card-9.jpg' },
-  { title: 'Card 4', imageSrc: 'assets/img/card-4.webp' },
-  { title: 'Card 4', imageSrc: 'assets/img/card-5.webp' },
-  { title: 'Card 4', imageSrc: 'assets/img/card-6.webp' },
-  { title: 'Card 4', imageSrc: 'assets/img/card-1.webp' },
+  { title: 'Card 1', imageSrc: 'assets/img/SL-1.jpg' },
+  { title: 'Card 3', imageSrc: 'assets/img/SL-2.jpg' },
+  { title: 'Card 4', imageSrc: 'assets/img/SL-3.jpg' },
+  { title: 'Card 4', imageSrc: 'assets/img/SL-4.jpg' },
+  { title: 'Card 4', imageSrc: 'assets/img/SL-5.jpg' },
+  { title: 'Card 4', imageSrc: 'assets/img/SL-6.jpg' },
+  { title: 'Card 4', imageSrc: 'assets/img/SL-7.jpg' },
   // Add more cards as needed
 ];
 colorPicker: any;
@@ -66,8 +68,8 @@ selectDesignValue = {
   colorValue: '',
   nameInputValue: '',
   jobInputValue: '',
-  headerColorValue:''
-
+  headerColorValue:'',
+  profilePhotoURL: ''
 };
 enterName: any;
 enterJobTitle: any;
@@ -76,6 +78,8 @@ gradientColor1: string = '#ffffff'; // Default color 1
 gradientColor2: string = '#000000'; // Default color 2
 gradientDegree: number = 0;
 Headergradient: any;
+color: any;
+profilePhoto: any;
 cardArray(array: any[], cardSize: number): any[] {
   const cards = [];
   for (let i = 0; i < array.length; i += cardSize) {
@@ -85,7 +89,9 @@ cardArray(array: any[], cardSize: number): any[] {
   return cards;
 }
 
-  constructor(private router: Router, private sharedDataService: SharedDataService) { }
+  constructor(private router: Router,
+              private sharedDataService: SharedDataService,
+              private sessionStorage: SessionStorageService) { }
 
   ngOnChanges(changes: any) {
     console.log('Sameer =>change ', changes);
@@ -93,6 +99,8 @@ cardArray(array: any[], cardSize: number): any[] {
 
   ngOnInit(): void {
     console.log('Sameer => selectDesignValue', this.selectDesignValue);
+    this.profilePhoto = sessionStorage.getItem('profilePhoto');
+    console.log('Sameer => his.profilePhoto 123 ', this.profilePhoto);
   }
 
 
@@ -102,6 +110,7 @@ cardArray(array: any[], cardSize: number): any[] {
       nameInputValue: this.enterName,
       jobInputValue: this.enterJobTitle,
       headerColorValue: this.selectHeaderColor,
+      profilePhotoURL: this.selectedPhotoURL
     };
     this.sharedDataService.newLocationAdded.emit(this.selectDesignValue);
   }
@@ -143,9 +152,10 @@ cardArray(array: any[], cardSize: number): any[] {
     this.emitSelectedDesignValues();
   }
 
-  selectColorPicker(colorPicker: any){
-    console.log('Sameer => colorPicker', colorPicker);
-    this.selectedColor = colorPicker.value;
+  selectColorPicker(){
+    const colorPicker = (document.getElementById('colorPicker') as HTMLInputElement).value;
+    console.log('Sameer => colorPicker 11111', colorPicker);
+    this.selectedColor = colorPicker;
     this.emitSelectedDesignValues();
   }
 
@@ -174,6 +184,24 @@ cardArray(array: any[], cardSize: number): any[] {
     console.log('Sameer => card', card);
     this.selectedColor = `url(${card.imageSrc}) no-repeat center / cover`
     this.emitSelectedDesignValues();
+  }
+
+  onFileSelected(event: Event) {
+    const fileInput = event.target as HTMLInputElement;
+    const file = fileInput.files?.[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        this.profilePhoto = e.target?.result as string;
+        console.log('Selected Photo:', this.profilePhoto);
+        sessionStorage.setItem('profilePhoto', this.profilePhoto);    // Store the profile photo in session storage
+      };
+
+      reader.readAsDataURL(file);
+      this.emitSelectedDesignValues();
+    }
   }
 
   enterNameData(){
