@@ -33,6 +33,7 @@ export class WebsiteElementsComponent implements OnInit {
   selectedPhotoURL: any = '';
   name: string = '';
   jobTitle: string ='';
+  text2: string = '';
   colors: string[] = ['#000','#3a3844', '#4d4730', '#f4ead8','#cf6b87','#5d2a42','#71719a','#6a8b7c','#fcb1a6',
                       '#dd7373','#aea3b0', '#29335c', '#114b5f', '#028090', '#a23b72', '#eaf0ce','#c0c5c1', '#7d8491',
                       '#f7d4bc'];
@@ -69,7 +70,8 @@ selectDesignValue = {
   nameInputValue: '',
   jobInputValue: '',
   headerColorValue:'',
-  profilePhotoURL: ''
+  profilePhotoURL: '',
+  introText:''
 };
 enterName: any;
 enterJobTitle: any;
@@ -80,6 +82,8 @@ gradientDegree: number = 0;
 Headergradient: any;
 color: any;
 profilePhoto: any;
+text: any;
+editorContent: any;
 cardArray(array: any[], cardSize: number): any[] {
   const cards = [];
   for (let i = 0; i < array.length; i += cardSize) {
@@ -105,15 +109,34 @@ cardArray(array: any[], cardSize: number): any[] {
 
 
   emitSelectedDesignValues(): void {
-    this.selectDesignValue = {
-      colorValue: this.selectedColor,
-      nameInputValue: this.enterName,
-      jobInputValue: this.enterJobTitle,
-      headerColorValue: this.selectHeaderColor,
-      profilePhotoURL: this.selectedPhotoURL
-    };
-    this.sharedDataService.newLocationAdded.emit(this.selectDesignValue);
+    // this.selectDesignValue = {
+    //   colorValue: this.selectedColor,
+    //   nameInputValue: this.enterName,
+    //   jobInputValue: this.enterJobTitle,
+    //   headerColorValue: this.selectHeaderColor,
+    //   profilePhotoURL: this.selectedPhotoURL
+    // };
+    // this.sharedDataService.newLocationAdded.emit(this.selectDesignValue);
   }
+
+  storeDesignValuesInSession(): void {
+    try {
+      this.selectDesignValue = {
+        colorValue: this.selectedColor,
+        nameInputValue: this.enterName,
+        jobInputValue: this.enterJobTitle,
+        headerColorValue: this.selectHeaderColor,
+        profilePhotoURL: this.selectedPhotoURL,
+        introText: ''
+      };
+      const selectDesignValueAsString = JSON.stringify(this.selectDesignValue);
+      sessionStorage.setItem('designValues', selectDesignValueAsString);
+      console.log('Design values stored in session:', this.selectDesignValue);
+    } catch (error) {
+      console.error('Error storing design values in session:', error);
+    }
+  }
+
 
   add(event: MatChipInputEvent): void {
     const input = event.input;
@@ -143,26 +166,30 @@ cardArray(array: any[], cardSize: number): any[] {
   selectColor(color: string): void {
     console.log('Sameer => color', color);
     this.selectedColor = color;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   selectGradient(gradient: string): void {
     console.log('Selected Gradient:', gradient);
     this.selectedColor = gradient;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   selectColorPicker(){
     const colorPicker = (document.getElementById('colorPicker') as HTMLInputElement).value;
     console.log('Sameer => colorPicker 11111', colorPicker);
     this.selectedColor = colorPicker;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   updateHeaderColor(colorPicker: any){
     console.log('Sameer => colorPicker12222', colorPicker);
     this.selectHeaderColor = colorPicker;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   updateGradient() {
@@ -172,18 +199,21 @@ cardArray(array: any[], cardSize: number): any[] {
 
     this.gradient = `linear-gradient(${degree}deg, ${color1}, ${color2})`;
     this.selectedColor = this.gradient;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   updateHeaderGradient(): void {
     this.selectHeaderColor = `linear-gradient(${this.gradientDegree}deg, ${this.gradientColor1}, ${this.gradientColor2})`;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   onSelectCard(card : any){
     console.log('Sameer => card', card);
     this.selectedColor = `url(${card.imageSrc}) no-repeat center / cover`
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   onFileSelected(event: Event) {
@@ -200,20 +230,26 @@ cardArray(array: any[], cardSize: number): any[] {
       };
 
       reader.readAsDataURL(file);
-      this.emitSelectedDesignValues();
+      // this.emitSelectedDesignValues();
+      this.storeDesignValuesInSession();
     }
   }
 
   enterNameData(){
     console.log('Name changed:', this.name);
     this.enterName = this.name;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
+  }
+
+  insertCustomElement(){
   }
 
   enterJobData(){
     console.log('Sameer => this.jobTitle', this.jobTitle);
     this.enterJobTitle = this.jobTitle;
-    this.emitSelectedDesignValues();
+    // this.emitSelectedDesignValues();
+    this.storeDesignValuesInSession();
   }
 
   goToELementPage(){

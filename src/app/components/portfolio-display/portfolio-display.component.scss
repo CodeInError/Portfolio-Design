@@ -77,10 +77,10 @@ a.navbar-brand .fa-globe:hover
 .profile-image {
   border-radius: 50%;
   display: block;
-  max-height:250px;
-  max-width: 250px;
+  height: 250px;
+  width: 250px;
   margin: 0 auto 1.5em;
-  width: 100%;
+  /* width: 100%; */
   opacity: 0.85;
 }
 

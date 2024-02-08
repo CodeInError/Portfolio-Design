@@ -75,7 +75,7 @@ import { PortfolioDisplayComponent } from './components/portfolio-display/portfo
     MatFormFieldModule,
     MatChipsModule,
     MatIconModule,
-    ColorPickerModule
+    ColorPickerModule,
   ],
   providers: [GoogleMap, MessageService],
   bootstrap: [AppComponent]

@@ -32,7 +32,7 @@
 
 
 <body>
-  <div class="header-container" [style.background]="nameDate?.headerColorValue ? nameDate.headerColorValue : 'black'">
+  <div class="header-container" [style.background]="this.selectDesignValue?.headerColorValue ? this.selectDesignValue.headerColorValue : 'black'">
     <a class="navbar-brand" style="color: #0aad0a;" href="/">
       <h5 class="nav-name">CreateMyFolio</h5>
     </a>
@@ -48,11 +48,11 @@
       </span>
     </div>
   </div>
-<div class="container-fluid splash" id="splash" [style.background]="nameDate?.colorValue">
+<div class="container-fluid splash" id="splash" [style.background]="this.selectDesignValue?.colorValue">
 <div class="container" >
   <img [src]="profilePhoto ? profilePhoto : 'https://s-media-cache-ak0.pinimg.com/736x/71/9e/59/719e59481d2be40a77ab6c3386fc0a45--photoshop-illustrator-illustrator-tutorials.jpg'"  alt="Portrait of Mr. Roboto" class="profile-image">
   <h1 class="hello">HELLO!</h1>
-  <h1 class="intro-text"><span class="lead">I am a <b>{{ jobInputValue ? jobInputValue : '........' }}</b> </span></h1>
+  <h1 class="intro-text"><span class="lead">I am a <b style="color: red;">{{ jobInputValue ? jobInputValue : '........' }}</b> Developer</span></h1>
   <!-- <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span> -->
   <div class="col-xs-12 social-section">
     <div class="text-center">
@@ -76,7 +76,7 @@
 </div>
 </div>
       <!-- About Section -->
-  <section class="success" id="about">
+  <section class="success" id="about" [style.background]="selectDesignValue?.colorValue ? selectDesignValue.colorValue : '#808080'">
       <div class="container">
           <div class="row">
               <div class="col-lg-12 text-center">
