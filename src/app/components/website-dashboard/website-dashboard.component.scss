@@ -37,3 +37,21 @@
   color: rgb(32,14,50);
   padding: 10px;
 }
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  /* Push elements apart */
+    align-items: center;             /* Vertically align */
+    padding: 10px 30px;
+}
+
+.logo-img {
+    width: 271px;
+}
+
+.HC-3 {
+    margin-left: auto;               /* Push to right */
+    cursor: pointer;
+}
+
