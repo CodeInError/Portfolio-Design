@@ -576,34 +576,40 @@
         hhhghg
       </div>
     </div>
-    <div class="pt-8 pb-4 scroll-smooth overflow-auto top-0 sticky">
-      <div class="cursor-pointer w-full">
-          <div style="width: 1010px; height: 659.306px;">
-            <div class="origin-top-left pointer-events-none" style="transform: scale(0.701389);">
-                <div class="inline-flex pointer-events-auto">
-                  <div class="p-realtive d-flex cursor-pointer overflow-hidden rounded-xl">
-                    <div style="width: 1440px; margin-top: 13px;" class="rounded-tr-xl rounded-tl-xl overflow-hidden">
-                      <div class="bg-white w-full d-flex" style="height: 5.5rem;">
-                          <div class="d-flex items-center ml-5" style="padding-top: 2px;">
-                            <div class="h-3 w-3 rounded-full preview-sidebar">
-                            </div>
-                            <div class="h-3 w-3 rounded-full preview-sidebar-1">
-                            </div>
-                            <div class="h-3 w-3 rounded-full preview-sidebar-2">
-                            </div>
-                          </div>
-                      </div>
-                      <!-- <iframe src="http://localhost:53135/PortfolioDisplay" class="selected-color" [style.background]="selectedColor" frameborder="0" style="width: 1440px; height: 900px; pointer-events: none;"></iframe> -->
-                      <!-- parent.component.html -->
-                      <app-portfolio-display  style="width: 1440px; height: 900px;"></app-portfolio-display>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
+    <div class="pt-8 pb-4 scroll-smooth overflow-auto sticky top-0">
+  <div class="cursor-pointer w-full">
+    <div class="preview-outer">
+      <div class="preview-scale">
+        <div class="inline-flex pointer-events-auto">
+          <div class="preview-card">
+            
+            <!-- MAIN RESPONSIVE WRAPPER -->
+            <div class="responsive-preview-wrapper">
+
+              <!-- HEADER BAR -->
+              <div class="responsive-preview-header">
+                <div class="preview-sidebar"></div>
+                <div class="preview-sidebar-1"></div>
+                <div class="preview-sidebar-2"></div>
+              </div>
+
+              <!-- CONTENT AREA -->
+              <div class="responsive-preview-content">
+                <app-portfolio-display></app-portfolio-display>
+              </div>
+
             </div>
+            <!-- END WRAPPER -->
+
+            <div></div>
+
           </div>
+        </div>
       </div>
+    </div>
   </div>
+</div>
+
   </div>
 </div>
 

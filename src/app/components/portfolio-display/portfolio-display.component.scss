@@ -381,7 +381,7 @@ hr.copyright
 }
 
 .header-container{
-  padding: 19px !important;
+  padding: 19px;
 }
 
 .HC-3 {
@@ -392,4 +392,35 @@ hr.copyright
   font: 500 27px / 30px Roboto, "Raleway", sans-serif;
   letter-spacing: normal;
   margin: 15px 0 20px 0;
+}
+
+@media (max-width:1700px){
+  .header-container {
+    padding: 10px;
+  }
+
+  .navbar-brand .nav-name {
+    font-size: 15px;
+}
+
+.HC-3 {
+    font-size: 15px !important;
+}
+
+.profile-image{
+  height: 150px;
+  width: 150px;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 2em;
+}
+hr.star-light:after,hr.star-portfolio:after {
+    font-size: 1em;
+}
+
+p.content-text{
+    font-size: 10px;
+}
 }
