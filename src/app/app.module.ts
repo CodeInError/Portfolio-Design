@@ -67,6 +67,7 @@ import { PortfolioDisplayComponent } from './components/portfolio-display/portfo
     DialogModule,
     ButtonModule,
     FormsModule,
+    EditorModule,
     DropdownModule,
     ProgressBarModule,
     ProgressSpinnerModule,

@@ -84,6 +84,7 @@ color: any;
 profilePhoto: any;
 text: any;
 editorContent: any;
+editorModules: any;
 cardArray(array: any[], cardSize: number): any[] {
   const cards = [];
   for (let i = 0; i < array.length; i += cardSize) {
@@ -102,9 +103,16 @@ cardArray(array: any[], cardSize: number): any[] {
   }
 
   ngOnInit(): void {
-    console.log('Sameer => selectDesignValue', this.selectDesignValue);
-    this.profilePhoto = sessionStorage.getItem('profilePhoto');
-    console.log('Sameer => his.profilePhoto 123 ', this.profilePhoto);
+
+    this.editorModules = {
+    toolbar: [
+      ['bold', 'italic', 'underline'],
+      [{ 'color': [] }],      // ← ENABLE COLORS
+      // [{ 'background': [] }]  // ← OPTIONAL
+    ]
+  };
+
+  this.profilePhoto = sessionStorage.getItem('profilePhoto');
   }
 
 
@@ -120,22 +128,24 @@ cardArray(array: any[], cardSize: number): any[] {
   }
 
   storeDesignValuesInSession(): void {
-    try {
-      this.selectDesignValue = {
-        colorValue: this.selectedColor,
-        nameInputValue: this.enterName,
-        jobInputValue: this.enterJobTitle,
-        headerColorValue: this.selectHeaderColor,
-        profilePhotoURL: this.selectedPhotoURL,
-        introText: ''
-      };
-      const selectDesignValueAsString = JSON.stringify(this.selectDesignValue);
-      sessionStorage.setItem('designValues', selectDesignValueAsString);
-      console.log('Design values stored in session:', this.selectDesignValue);
-    } catch (error) {
-      console.error('Error storing design values in session:', error);
-    }
+  try {
+    this.selectDesignValue = {
+      colorValue: this.selectedColor,
+      nameInputValue: this.enterName,
+      jobInputValue: this.enterJobTitle,
+      headerColorValue: this.selectHeaderColor,
+      profilePhotoURL: this.profilePhoto, // Correct: actual profile photo
+      introText: this.text2               // Correct: editor text
+    };
+
+    sessionStorage.setItem('designValues', JSON.stringify(this.selectDesignValue));
+
+    console.log("Sameer => Saved Design", this.selectDesignValue);
+  } catch (error) {
+    console.error("Error storing design values in session:", error);
   }
+}
+
 
 
   add(event: MatChipInputEvent): void {
@@ -272,8 +282,16 @@ cardArray(array: any[], cardSize: number): any[] {
     this.showCustomizePage = false;
     this.showDominPage = true;
   }
+
+  onEditorChange(value: any) {
+  this.text2 = value;
+  this.storeDesignValuesInSession();
+}
 }
 
 interface Link {
   name: string;
 }
+
+
+

@@ -280,6 +280,54 @@
   }
 }
 
+/* component.scss (or global stylesheet) */
+.fsb-d2 {
+  padding: 2.25rem !important;
+  padding-bottom: 2.5rem !important;
+  box-shadow: 2px 1px 7px rgba(0,0,0,.05) !important;
+  background-color: rgba(255,255,255,1) !important;
+  border-radius: 20px !important;
+}
+
+/* container for editor */
+.cOQQsl {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  user-select: auto !important;
+}
+
+/* Ensure Quill toolbar & editor are visible & clickable and have consistent border-radius */
+.p-editor .ql-toolbar {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  margin-bottom: 0 !important;
+}
+
+/* Editor content area height and border */
+.p-editor .ql-container {
+  min-height: 240px !important; /* ensures editing area is big enough */
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  border-top: none !important;
+  overflow: auto !important;
+  padding: 0.75rem !important; /* internal padding if you like */
+}
+
+/* If some parent layer overlays the editor, make sure pointer events allowed */
+.p-relative {
+  position: relative !important;
+  pointer-events: auto !important;
+}
+
+/* optional: style the header h2 */
+.bmldrO {
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+
 
 
 
